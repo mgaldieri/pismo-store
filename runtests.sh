@@ -22,7 +22,7 @@ echo "Iniciando testes..."
 mkdir ${VENV_DIR}
 pyvenv "${VENV}" 2>&1 1>/dev/null
 source "${VENV}/bin/activate"
-pip3 install -r ${TEST_DIR}/requirements.txt 2>&1 1>/dev/null
+pip3 install wheel && pip3 install -r ${TEST_DIR}/requirements.txt 2>&1 1>/dev/null
 
 # Start docker
 if hash docker-machine 2>/dev/null; then
